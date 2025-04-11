@@ -1,6 +1,6 @@
 .navbar {
   padding: 1.5rem 2rem;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   z-index: 999;
   width: 100%;
 }
@@ -25,12 +25,12 @@
 #navbarExpanded {
   display: flex;
   flex-direction: column;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 #navbarCompact {
   display: none;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .navbar.scrolled #navbarExpanded {
