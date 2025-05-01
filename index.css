@@ -51,7 +51,6 @@ html {
   width: 100%;
 }
 
-/* Textloggor */
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
@@ -82,7 +81,7 @@ html {
   font-weight: bold;
   color: white;
   margin: 0;
-  z-index: 10; /* Viktigt! Ligger över bilden */
+  z-index: 10;
   opacity: 1;
   transition: opacity 0.3s;
 }
@@ -115,7 +114,7 @@ footer,
 }
 @media (max-width: 768px) {
   .hero-logo-text {
-    font-size: 50px;
+    font-size: 60px;
   }
 
   .hero-header {
@@ -124,6 +123,6 @@ footer,
   }
 
   .navbar {
-    padding: 0.5rem 1rem; /* Minska avståndet i navbar på små skärmar */
+    padding: 0.5rem 1rem;
   }
 }
