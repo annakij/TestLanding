@@ -10,428 +10,77 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="index.css" />
-    <title>Document</title>
+    <title>Bar Robusta</title>
   </head>
   <body>
-    <nav class="navbar fixed-top transparent" id="mainNavbar">
-      <div class="container-fluid flex-column" id="navbarExpanded">
-        <!-- Övre rad -->
-        <div
-          class="navbar-top d-flex justify-content-between align-items-center w-100"
-        >
-          <a class="navbar-brand" href="#"
-            ><img
-              id="logo"
-              src="icons/icons8-controller-50.png"
-              alt="Playstation"
-              class="nav-icon me-2"
-            />KÄRRA GAME CENTER</a
-          >
-
-          <form class="search-form ms-5 me-auto" role="search">
-            <input type="text" class="search-input" placeholder="Sök spel..." />
-            <button type="submit" class="search-btn">
-              <img
-                src="icons/icons8-search-32.png"
-                alt="Search"
-                class="nav-icon"
-              />
-            </button>
-          </form>
-
-          <button class="btn login-btn">
-            <img
-              src="icons/icons8-user-30.png"
-              alt="Login"
-              class="nav-icon me-2"
-            />
-            Logga in
-          </button>
+    <nav id="navbar" class="navbar navbar-expand-lg px-3 py-4">
+      <div class="container-fluid">
+        <!-- Loggor -->
+        <div class="d-flex align-items-center">
+          <span class="logo-text small-logo">Bar Robusta</span>
         </div>
 
-        <!-- Undre rad -->
-        <div class="navbar-bottom d-flex justify-content-center mt-2">
-          <ul class="navbar-nav d-flex flex-row gap-4">
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Meny -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="mainNavbar"
+        >
+          <ul class="navbar-nav gap-lg-3 text-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="products.html"
-                ><img
-                  src="icons/icons8-products-50.png"
-                  alt="PC"
-                  class="nav-icon me-2"
-                />Produkter</a
-              >
+              <a class="nav-link" href="#">Hem</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
-                ><img
-                  src="icons/icons8-event-50.png"
-                  alt="Playstation"
-                  class="nav-icon me-2"
-                />Event</a
-              >
+              <a class="nav-link" href="#">Vinprovningar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
-                ><img
-                  src="icons/icons8-contact-50.png"
-                  alt="Xbox"
-                  class="nav-icon me-2"
-                />Kontakt</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
-                ><img
-                  src="icons/icons8-about-50.png"
-                  alt="Om oss"
-                  class="nav-icon me-2"
-                />Om Oss</a
-              >
+              <a class="nav-link" href="#">Öppettider</a>
             </li>
           </ul>
         </div>
       </div>
-
-      <!-- Kompakt navbar vid scroll -->
-      <div
-        class="container-fluid d-none justify-content-between align-items-center"
-        id="navbarCompact"
-      >
-        <a class="navbar-brand" href="#"
-          ><img
-            id="logo"
-            src="icons/icons8-controller-50.png"
-            alt="PC"
-            class="nav-icon me-2"
-          />KGC</a
-        >
-
-        <ul class="navbar-nav d-flex flex-row gap-3 ms-5">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"
-              ><img
-                src="icons/icons8-products-50.png"
-                alt="PC"
-                class="nav-icon me-2"
-              />Produkter</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"
-              ><img
-                src="icons/icons8-event-50.png"
-                alt="Playstation"
-                class="nav-icon me-2"
-              />Event</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"
-              ><img
-                src="icons/icons8-contact-50.png"
-                alt="Xbox"
-                class="nav-icon me-2"
-              />Kontakt</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"
-              ><img
-                src="icons/icons8-about-50.png"
-                alt="Om oss"
-                class="nav-icon me-2"
-              />Om Oss</a
-            >
-          </li>
-        </ul>
-        <div class="d-flex align-items-end">
-          <form class="search-form compact-form d-flex" role="search">
-            <input type="text" class="search-input" placeholder="Sök..." />
-            <button type="submit" class="search-btn">
-              <img
-                src="icons/icons8-search-32.png"
-                alt="Search"
-                class="nav-icon"
-              />
-            </button>
-          </form>
-          <button class="btn login-btn">
-            <img
-              src="icons/icons8-user-30.png"
-              alt="Login"
-              class="nav-icon me-2"
-            />
-            Logga in
-          </button>
-        </div>
-      </div>
     </nav>
 
-    <div>
-      <header class="position-relative">
-        <img
-          class="img-fluid"
-          src="images/quentin-touvard-CDy_2HJV69g-unsplash.jpg"
-          alt="Game Store Header"
-        />
-      </header>
-    </div>
+    <header class="hero-header">
+      <img
+        class="header-image"
+        src="images/grigorii-shcheglov-l64e9K5I-lU-unsplash.jpg"
+        alt="Restaurant Header"
+      />
+      <h1 class="hero-logo-text">Bar Robusta</h1>
+    </header>
 
-    <div>
-      <h1 class="mt-5 ms-5">Populära produkter</h1>
-    </div>
-
-    <div class="container pt-5" id="produkter">
-      <div class="d-flex justify-content-center gap-4">
-        <div class="col-lg-4 col-12">
-          <div class="game-card">
-            <a href="produktsida.html">
-              <div class="game-image-container">
-                <img src="gameimages/header.jpg" alt="Chained Together" />
-              </div>
-            </a>
-            <div class="game-info">
-              <div class="game-title">Chained Together</div>
-              <div class="game-price">399 kr</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-12">
-          <div class="game-card">
-            <a href="produktsida.html">
-              <div class="game-image-container">
-                <img src="gameimages/badcells.jpg" alt="Dead Cells" />
-              </div>
-            </a>
-            <div class="game-info">
-              <div class="game-title">Dead Cells</div>
-              <div class="game-price">199 kr</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-12">
-          <div class="game-card">
-            <a href="produktsida.html">
-              <div class="game-image-container">
-                <img src="gameimages/balatro.jpg" alt="Balatro" />
-              </div>
-            </a>
-            <div class="game-info">
-              <div class="game-title">Balatro</div>
-              <div class="game-price">99 kr</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-5" id="produkter">
-      <div class="d-flex justify-content-center gap-4">
-        <div class="col-lg-4 col-12">
-          <div class="game-card">
-            <a href="produktsida.html">
-              <div class="game-image-container">
-                <img src="gameimages/sniperelite.jpg" alt="-" />
-              </div>
-            </a>
-            <div class="game-info">
-              <div class="game-title">Sniper Elite</div>
-              <div class="game-price">249 kr</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-12">
-          <div class="game-card">
-            <a href="produktsida.html">
-              <div class="game-image-container">
-                <img src="gameimages/snowrunner.jpg" alt="Chained Together" />
-              </div>
-            </a>
-            <div class="game-info">
-              <div class="game-title">Snow Runner</div>
-              <div class="game-price">319 kr</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-12">
-          <div class="game-card">
-            <a href="produktsida.html">
-              <div class="game-image-container">
-                <img src="gameimages/fallout.jpg" alt="Chained Together" />
-              </div>
-            </a>
-            <div class="game-info">
-              <div class="game-title">Fallout 4</div>
-              <div class="game-price">299 kr</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="d-flex" id="DnD">
-      <div class="image-wrapper my-5">
-        <img src="images/ss-DnD.jpg" class="img-fluid" alt="DnD-event" />
-
-        <div class="overlay-text">
-          <h2>Dungeons and Dragons</h2>
-          <h2>
-            Vi håller event (nästan) varje månad, håll utkik under vår event
-            sida!
-          </h2>
-          <button class="btn btn-light mt-3">
-            Kolla närmare på kommande event
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h1 class="mt-5 ms-5">Nyheter</h1>
-    </div>
-
-    <div
-      id="carouselControls"
-      class="carousel slide m-auto py-5"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="d-flex justify-content-center gap-4">
-            <!-- Produkt 1 -->
-            <div class="card game-card">
-              <div class="game-image-container">
-                <img
-                  src="gameimages/badcells.jpg"
-                  class="card-img-top"
-                  alt="Game 1"
-                />
-              </div>
-              <div class="game-info">
-                <span class="game-title">Dead Cells</span>
-                <span class="game-price">199 kr</span>
-              </div>
-            </div>
-            <!-- Produkt 2 -->
-            <div class="card game-card">
-              <div class="game-image-container">
-                <img
-                  src="gameimages/balatro.jpg"
-                  class="card-img-top"
-                  alt="Game 2"
-                />
-              </div>
-              <div class="game-info">
-                <span class="game-title">Balatro</span>
-                <span class="game-price">99 kr</span>
-              </div>
-            </div>
-            <!-- Produkt 3 -->
-            <div class="card game-card">
-              <div class="game-image-container">
-                <img
-                  src="gameimages/fallout.jpg"
-                  class="card-img-top"
-                  alt="Game 3"
-                />
-              </div>
-              <div class="game-info">
-                <span class="game-title">Fallout 4</span>
-                <span class="game-price">299 kr</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="d-flex justify-content-center gap-4">
-            <!-- Produkt 4 -->
-            <div class="card game-card">
-              <div class="game-image-container">
-                <img
-                  src="gameimages/header.jpg"
-                  class="card-img-top"
-                  alt="Game 4"
-                />
-              </div>
-              <div class="game-info">
-                <span class="game-title">Chained Together</span>
-                <span class="game-price">399 kr</span>
-              </div>
-            </div>
-            <!-- Produkt 5 -->
-            <div class="card game-card">
-              <div class="game-image-container">
-                <img
-                  src="gameimages/sniperelite.jpg"
-                  class="card-img-top"
-                  alt="Game 5"
-                />
-              </div>
-              <div class="game-info">
-                <span class="game-title">Sniper Elite</span>
-                <span class="game-price">249 kr</span>
-              </div>
-            </div>
-            <!-- Produkt 6 -->
-            <div class="card game-card">
-              <div class="game-image-container">
-                <img
-                  src="gameimages/snowrunner.jpg"
-                  class="card-img-top"
-                  alt="Game 6"
-                />
-              </div>
-              <div class="game-info">
-                <span class="game-title">Snow Runner</span>
-                <span class="game-price">319 kr</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Navigation -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselControls"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselControls"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    <main style="height: 1000px; background-color: #fff">
+      <h1 style="padding: 100px">Meny osv lmao</h1>
+    </main>
 
     <div class="footer">
       <footer class="ms-5 py-5 text-start">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html">Hem</a>
         </li>
         <li>
-          <a href="Portfolio.html">Produkter</a>
+          <a href="#">Instagramlänk med icon</a>
         </li>
         <li>
-          <a href="Contact.html">Event</a>
+          <a href="#">LocationLänk med icon</a>
         </li>
         <li>
-          <a href="About.html">Kontakt</a>
+          <a href="#">Kontakt mail som poppar halvskärm</a>
         </li>
-        <p>&copy; 2025, Kärra Game Center – all rights reserved.</p>
+        <p>&copy; 2025, Bar Robusta – all rights reserved.</p>
       </footer>
     </div>
 
@@ -444,13 +93,16 @@
       ;
     ></script>
     <script>
-      const navbar = document.getElementById("mainNavbar");
-
       window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        const heroLogoText = document.querySelector(".hero-logo-text");
+
         if (window.scrollY > 100) {
-          navbar.classList.add("scrolled", "solid");
+          navbar.classList.add("scrolled");
+          heroLogoText.classList.add("scrolled-out");
         } else {
-          navbar.classList.remove("scrolled", "solid");
+          navbar.classList.remove("scrolled");
+          heroLogoText.classList.remove("scrolled-out");
         }
       });
     </script>
