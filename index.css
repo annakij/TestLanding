@@ -2,7 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar {
@@ -47,6 +47,11 @@ html {
   transition: width 0.3s ease;
 }
 
+.nav-link.active {
+  color: rgb(126, 28, 28);
+  font-weight: bold;
+}
+
 .nav-link:hover::after {
   width: 100%;
 }
@@ -58,13 +63,70 @@ html {
   transition: opacity 0.3s;
 }
 
-.large-logo {
-  font-size: 2rem;
-}
-
 .small-logo {
   opacity: 0;
-  font-size: 2rem;
+  width: 200px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+main {
+  text-align: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(126, 28, 28);
+  color: #fff;
+  width: 200px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: rgb(140, 72, 72);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  text-align: start;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+}
+
+.menu-header .line {
+  flex-grow: 1;
+  border-bottom: 1px solid #ccc;
+  opacity: 0.9;
+}
+
+.border-bottom {
+  opacity: 0.9;
+}
+
+#price {
+  color: rgb(126, 28, 28);
+}
+
+#aboutText {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+#pastaImage {
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .header-image {
@@ -77,9 +139,7 @@ html {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  font-size: 150px;
-  font-weight: bold;
-  color: white;
+  width: 50%;
   margin: 0;
   z-index: 10;
   opacity: 1;
@@ -89,7 +149,7 @@ html {
 /* Scroll-state */
 .scrolled {
   background-color: rgba(126, 28, 28, 0.8);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .scrolled .small-logo {
@@ -111,10 +171,20 @@ footer,
   background-color: rgb(126, 28, 28);
   color: #fff;
   list-style: none;
+  text-decoration: none;
+}
+
+.footer li {
+  margin-top: 0.4rem;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
 }
 @media (max-width: 768px) {
   .hero-logo-text {
-    font-size: 60px;
+    width: 90%;
   }
 
   .hero-header {
@@ -124,5 +194,20 @@ footer,
 
   .navbar {
     padding: 0.5rem 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item {
+    padding: 5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-header {
+    position: relative;
+    overflow: hidden;
   }
 }

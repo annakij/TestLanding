@@ -16,7 +16,11 @@
     <nav id="navbar" class="navbar navbar-expand-lg px-3 py-4">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <span class="logo-text small-logo">Bar Robusta</span>
+          <img
+            class="logo-text small-logo"
+            src="images/bar_robusta_white_text.png"
+            alt="Bar Robusta Logo"
+          />
         </div>
         <button
           class="navbar-toggler"
@@ -40,6 +44,15 @@
               <a class="nav-link" href="#">Hem</a>
             </li>
             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://3.bordsbokaren.se/boka.php?i=3001&k=YLuN2trV"
+                aria-current="page"
+                target="_blank"
+                >Boka Bord</a
+              >
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#">Vinprovningar</a>
             </li>
             <li class="nav-item">
@@ -58,42 +71,196 @@
       />
 
       <img
-        src="images/laura-adai-gJLFUPEDOgM-unsplash.jpg"
+        src="images/mobileHeader.png"
         alt="Header mobil"
         class="header-image d-block d-md-none"
       />
 
-      <h1 class="hero-logo-text">Bar Robusta</h1>
+      <img
+        class="hero-logo-text"
+        src="images/bar_robusta_red_text.png"
+        alt="Bar Robusta Logo"
+      />
     </header>
 
-    <main style="height: 1500px; background-color: #fff">
-      <h1 style="padding: 100px">
-        (Header bild bytt mot mysig mörkare bild på robusta utifrån med
-        inbjudande belysning) -- mobile bytt mot portraitbild för mer
-        "applikations" vy samt täckt bildskärm vid non scroll
-      </h1>
-      <h1 style="padding: 100px">
-        (Vektoriserad logga i vitt i hero-image samt nav-bar)
-      </h1>
-      <h1 style="padding: 100px">Menycontent som fade'ar in/ut vid scroll</h1>
-      <h1 style="padding: 100px">div med concept text</h1>
+    <main>
+      <div class="container my-5" id="menuDisplay">
+        <div class="d-column align-items-center">
+          <a
+            class="btn mx-auto my-5"
+            id="bookButton"
+            aria-current="page"
+            target="_blank"
+            href="https://3.bordsbokaren.se/boka.php?i=3001&k=YLuN2trV"
+            >Boka Bord</a
+          >
+          <h1 class="mt-5">Kvällsmeny</h1>
+          <h5 class="my-5">Tisdag - Lördag 17:00-22:00</h5>
+        </div>
+        <div class="menu-grid">
+          <!-- Rätt 1 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Stuzzichino</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">185 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Veckans utvalda ost & chark från Italien, serveras med marmelad.
+            </p>
+          </div>
+
+          <!-- Rätt 2 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Risotto con capesante</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">295 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Risotto med smörstekt pilgrimsmussla, vitvin, sparris,
+              skaldjursfond paprika och Ndujaolja med sumak.
+            </p>
+          </div>
+
+          <!-- Rätt 3 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Burrata</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">165 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Burrata med soltorkad tomatpesto, ungsbakade vindruvor och kapris.
+            </p>
+          </div>
+
+          <!-- Rätt 4 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Tagliatelle al Tartufo</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">265 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Färsk pasta med hemgjord tryffelkräm, grana padano och hyvlad
+              tryffel från Toscana.
+            </p>
+          </div>
+
+          <!-- Rätt 5 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Carne cruda</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">175 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Råbiff på kalvinnanlår, dragonemulsion, semitorkade tomater, 30
+              månaders lagrad parmesan och ruccola.
+            </p>
+          </div>
+
+          <!-- Rätt 6 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name"
+                >Gnocchi guanciale e mele</span
+              >
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">285 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Potatispasta med calvados, äpple, guanciale, ostcrunch och
+              rosmarinolja.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <a
+          class="btn mx-3 mt-5"
+          id="bookButton"
+          aria-current="page"
+          target="_blank"
+          href="https://barrobusta.se/ws/media-library/d33e37a8d8a64b6ca6d1574c6ae1919d/vinlista-bar-robusta.pdf"
+          >Vinlista</a
+        >
+        <a
+          class="btn mx-3 mt-5"
+          id="bookButton"
+          aria-current="page"
+          target="_blank"
+          href="https://barrobusta.se/ws/media-library/1be6d7ab5a40375d273ef281a3da23d6/lunch-v-14-april.pdf"
+          >Lunchmeny</a
+        >
+      </div>
+
+      <div class="d-block col-md-8 mx-auto" id="aboutText">
+        <h4 class="mt-5">
+          En mat & vinbar i hjärtat av Linné med mycket fokus på hantverksviner
+          som vi importerar upp själva från Europa. Maten fokuseras dels från
+          Italien men även övriga Europa, allt för att passa till det underbara
+          vinet vi serverar.
+        </h3>
+        <h1 class="mt-5">Varmt välkomna!</h1>
+        <img class="mt-5" src="images/pastaFooterImage.png" alt="Pasta Line Drawing" id="pastaImage"/>
+      </div>
     </main>
 
     <div class="footer">
       <footer class="ms-5 py-5 mt-5 text-start">
         <li>
-          <a href="index.html">Hem</a>
+          <a
+            class="footer-link"
+            aria-current="page"
+            href="https://www.instagram.com/barrobusta/"
+            ><img
+              src="icons/icons8-instagram-50.png"
+              alt="Instagram"
+              target="_blank"
+              class="icon me-2"
+            />barrobusta</a
+          >
         </li>
         <li>
-          <a href="#">Instagramlänk med icon</a>
+          <a
+            ><img
+              src="icons/icons8-phone-50.png"
+              alt="Phone"
+              class="icon me-2"
+            />031-713 38 29</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="footer-link"
+            href="mailto:info@barrobusta.se"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="icons/icons8-mail-48.png"
+              alt="Email"
+              class="icon me-2"
+            />info@barrobusta.se</a
+          >
         </li>
         <li>
-          <a href="#">LocationLänk med icon</a>
+          <a
+            class="footer-link"
+            aria-current="page"
+            href="https://maps.app.goo.gl/2gxySFhVynQQchbn6"
+            target="_blank"
+            ><img
+              src="icons/icons8-location-50.png"
+              alt="Location"
+              class="icon me-2"
+            />Olivedalsgatan 26, 413 10 Göteborg</a
+          >
         </li>
-        <li>
-          <a href="#">Kontakt mail som poppar halvskärm</a>
-        </li>
-        <p>&copy; 2025, Bar Robusta – all rights reserved.</p>
+        <p class="mt-5">&copy; 2025, Bar Robusta – all rights reserved.</p>
       </footer>
     </div>
 

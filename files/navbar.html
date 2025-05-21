@@ -1,0 +1,99 @@
+<nav id="navbar" class="navbar navbar-expand-lg px-2 py-3">
+  <div
+    class="container-fluid d-flex align-items-center justify-content-between"
+  >
+    <button
+      class="navbar-toggler order-3 ms-2"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      id="togglerButton"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="d-flex align-items-center small-logo me-auto">
+      <img
+        src="icons/karra-dice-trasparent.png"
+        alt="KGC Logo"
+        class="logo-icon"
+      />
+      <a class="d-flex align-items-center text-decoration-none" href="/">
+        <span class="logo-text">Kärra Game Corner</span>
+      </a>
+    </div>
+
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="mainNavbar"
+    >
+      <ul class="navbar-nav gap-lg-3 d-md-flex text-center mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/" id="navLinkHome">Hem</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products" id="navLinkProducts">Produkter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events" id="navLinkEvents">Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forum" id="navLinkForum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus" id="navLinkAboutUs">Om Oss</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="games" id="navLinkGames">Spela</a>
+        </li>
+      </ul>
+      <div class="d-lg-flex ms-auto">
+        <button
+          class="btn login-btn"
+          @onclick="NavigateToLogin"
+          id="expandedLoginBtn"
+        >
+          <img
+            src="icons/icons8-user-30.png"
+            class="nav-icon me-2"
+            alt="login"
+            id="expandedLoginIcon"
+          />
+          @if (isAuthenticated && !string.IsNullOrEmpty(username)) { @username }
+          else {
+          <span>Logga in</span>
+          }
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header id="heroHeader" class="hero-header d-none">
+  <img
+    src="images/HeaderImage.webp"
+    alt="Header desktop"
+    id="desktopHeaderImage"
+    class="header-image d-none d-md-block"
+  />
+  <img
+    src="images/mobileHeader.png"
+    alt="Header mobil"
+    id="mobileHeaderImage"
+    class="header-image d-block d-md-none"
+  />
+  <img
+    class="hero-logo"
+    src="images/heroLogo.png"
+    alt="Kärra Game Corner Logo"
+  />
+</header>
+
+<div
+  id="grayHeader"
+  class="header"
+  style="height: 200px; background-color: #444343; display: none"
+></div>
