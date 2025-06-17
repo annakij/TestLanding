@@ -13,89 +13,71 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="landing.css" />
+    <link rel="stylesheet" href="index.css" />
     <title>Bar Robusta</title>
   </head>
   <body>
-    <nav id="navbar" class="navbar px-3 py-3">
-      <div
-        class="container-fluid d-flex justify-content-between align-items-center"
-      >
-        <img
-          class="logo-text small-logo"
-          src="images/bar_robusta_white_text.png"
-          alt="Bar Robusta Logo"
-        />
-
-        <!-- Toggle button always visible -->
+    <nav id="navbar" class="navbar navbar-expand-lg px-3 py-4">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <img
+            class="logo-text small-logo"
+            src="images/bar_robusta_white_text.png"
+            alt="Bar Robusta Logo"
+          />
+        </div>
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Offcanvas Menu -->
+        <!-- Meny -->
         <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
+          class="collapse navbar-collapse justify-content-end"
+          id="mainNavbar"
         >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title">
-              <img
-                id="offcanvasNavbarLabel"
-                class="logo-text small-logo"
-                src="images/bar_robusta_red_text.png"
-                alt="Bar robusta Logo"
-              />
-            </h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Hem</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Alt. Två</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#wineTastings">Vinprovningar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#wineTastings">Handla Vin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#openingHours">Öppettider</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="navbar-nav gap-lg-3 text-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hem</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://3.bordsbokaren.se/boka.php?i=3001&k=YLuN2trV"
+                aria-current="page"
+                target="_blank"
+                >Boka Bord</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="landing.html">Alternativ 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Öppettider</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <header class="hero-header">
       <img
-        src="summerMenu/_A4A2052.jpg"
+        src="images/siyuan-g_V2rt6iG7A-unsplash.jpg"
         alt="Header desktop"
-        class="header-image parallax-bg d-none d-md-block"
+        class="header-image d-none d-md-block"
       />
 
       <img
-        src="summerMenu/_A4A2046.jpg"
+        src="images/mobileHeader.png"
         alt="Header mobil"
-        class="header-image parallax-bg d-block d-md-none"
+        class="header-image d-block d-md-none"
       />
 
       <img
@@ -106,207 +88,132 @@
     </header>
 
     <main>
-      <h1 class="text-center mt-5">Välkommen! Hungrig?</h1>
-
-      <div class="d-flex justify-content-center gap-lg-3 flex-wrap">
-        <a
-          class="menu-link mx-3 mt-5"
-          href="files/K V Ä L L S M E N Y.pdf"
-          target="_blank"
-        >
-          <img src="images/eveningMenu.png" alt="Kvällsmeny" />
-          <div class="menu-text">Kvällsmeny</div>
-        </a>
-
-        <a
-          class="menu-link mx-3 mt-5"
-          href="files/L U N C H M E N Y.pdf"
-          target="_blank"
-        >
-          <img src="images/lunchMenu.png" alt="Lunchmeny" />
-          <div class="menu-text">Lunchmeny</div>
-        </a>
-        <!-- <a
-          class="menu-link mx-3 mt-5"
-          href="files/L U N C H M E N Y.pdf"
-          target="_blank"
-        >
-          <img src="images/wineMenu.png" alt="Vinlista" id="wineMenu" />
-          <div class="menu-text">Vinlista</div>
-        </a> -->
-      </div>
-
-      <div class="container" id="aboutText">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-12 d-flex flex-column flex-md-row">
-            <div class="col-md-5">
-              <img
-                src="images/logoRound.png"
-                alt="Pasta Line Drawing"
-                id="pastaImage"
-                class="img-fluid mb-5"
-              />
-            </div>
-            <div class="col-md-7">
-              <div class="px-5">
-                <h3>Bar Robusta fyller snart 15 år!</h3>
-                <p class="mt-5">
-                  Vi älskar mat och vin, och vi älskar Italien! Vi kan nog
-                  stoltsera med Sveriges minsta kök, men det går ändå bra att
-                  laga utsökt mat med Italienska influenser.
-                </p>
-                <p>
-                  Vi importerar nästan allt vårat vin själva då hantverket är
-                  viktigt för oss. Vi jobbar bara med så rena produkter som
-                  möjligt och vi lagar allt från grunden.
-                </p>
-                <p>
-                  Hos oss äter du en god middag tisdag till lördag eller lunch
-                  fredag och lördag, eller varför inte beställa hem våra
-                  hantverksviner direkt hem till dörren från distanshandeln Bara
-                  Vin?
-                </p>
-                <p>Varmt välkomna till oss,</p>
-                <p>Pernilla, Johan & Alessandro</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="horizontal-gallery-wrapper">
-        <button class="scroll-btn left" onclick="scrollGallery(-1)">‹</button>
-        <div class="horizontal-gallery" id="horizontalGallery">
-          <div class="gallery-column">
-            <img src="summerMenu/_A4A2029.jpg" alt="Drink" />
-            <img src="summerMenu/_A4A2040.jpg" alt="Carpaccio with Drink" />
-          </div>
-          <div class="gallery-column">
-            <img src="summerMenu/_A4A2052.jpg" alt="Dinner" />
-            <img src="summerMenu/_A4A2046.jpg" alt="Entrance Bar Robusta" />
-            <img src="images/outsideRobusta2.png" alt="Bar Robusta Street" />
-          </div>
-          <div class="gallery-column">
-            <img src="summerMenu/_A4A2077.jpg" alt="Food" />
-            <img src="summerMenu/_A4A2066.jpg" alt="Yosemite National Park" />
-          </div>
-          <div class="gallery-column">
-            <img src="images/insideRobusta.png" alt="Cosy Dining" />
-            <img src="images/drink.png" alt="Cocktail" />
-
-            <img src="summerMenu/_A4A2034.jpg" alt="Staff with Drink" />
-          </div>
-          <div class="gallery-column">
-            <img src="summerMenu/_A4A2059.jpg" alt="Risotto" />
-            <img src="summerMenu/_A4A2074.jpg" alt="Espresso" />
-          </div>
-          <div class="gallery-column">
-            <img src="summerMenu/_A4A2068.jpg" alt="Burrata" />
-            <img src="images/insideRobusta2.png" alt="Dinner" />
-            <img src="images/menuItem.png" alt="Meat Dish" />
-          </div>
-        </div>
-        <button class="scroll-btn right" onclick="scrollGallery(1)">›</button>
-      </div>
-
-      <div class="row justify-content-center" id="wineTastings">
-        <div class="container py-5">
-          <h1 class="mb-5">Vinprovningar</h1>
-          <div
-            class="col-12 col-md-12 d-flex flex-column flex-md-row gap-4 px-5"
+      <div class="container my-5" id="menuDisplay">
+        <div class="d-column align-items-center">
+          <a
+            class="btn mx-auto my-5"
+            id="bookButton"
+            aria-current="page"
+            target="_blank"
+            href="https://3.bordsbokaren.se/boka.php?i=3001&k=YLuN2trV"
+            >Boka Bord</a
           >
-            <div class="col-md-6">
-              <h5>På vårt vis</h5>
-              <p>
-                En gång i månaden under höst, vinter och vår dukar vi upp för
-                vinprovning – alltid med nya teman. För 595 kr får du 4–5
-                smakprov samt ost & chark. Boka din plats via vårt
-                bokningssystem!
-              </p>
-              <h5 class="mt-5">Privat provning? Självklart!</h5>
-              <p>
-                Vi tar gärna emot mindre sällskap (4 – 10 personer) för privata
-                provningar. Ni väljer själva tema och vi syr ihop kvällen
-                tillsammans – alltid med något gott att plocka till glasen.
-              </p>
-
-              <h5 class="mt-5">Winemakers Dinner</h5>
-              <p>
-                Vi bjuder upp våra underbara vinmakare till Robusta så att de
-                själva får visa upp sina viner. Detta gör vi 6 ggr per år och
-                självklart lagar vi underbar mat till. Det blir tre Winemakers
-                dinner till hösten, info om datum och vinmakare kommer inom
-                kort.
-              </p>
+          <h1 class="mt-5">Kvällsmeny</h1>
+          <h5 class="my-5">Tisdag - Lördag 17:00-22:00</h5>
+        </div>
+        <div class="menu-grid">
+          <!-- Rätt 1 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Stuzzichino</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">185 KR</span>
             </div>
-            <div class="col-md-6 mt-4">
-              <h5 class="my-4">Tider i höst:</h5>
-              <p>
-                9 September – Franska Cru <br /><br />
-
-                10 September – Valpolicella <br /><br />
-
-                7 Oktober – Monsters of Toscana <br /><br />
-
-                8 Oktober – Piemonte <br /><br />
-
-                11 Oktober – Oak of the World <br /><br />
-
-                12 Oktober – Gamla Bourgogne
-              </p>
-            </div>
-          </div>
-          <div class="px-5">
-            <h3 class="mt-5">Handla Vin</h3>
-            <p class="mt-5">
-              Beställ hem våra hantversviner direkt till dörren från
-              distanshandeln Bara Vin eller handla från vårt personliga lager!
+            <p class="text-muted mt-2 mb-0">
+              Veckans utvalda ost & chark från Italien, serveras med marmelad.
             </p>
           </div>
-          <a
-            class="btn m-3"
-            href="https://baravin.nu/"
-            aria-current="page"
-            target="_blank"
-            >Bara Vin</a
-          >
-          <a
-            class="btn m-3"
-            href="https://www.robustavin.se/"
-            aria-current="page"
-            target="_blank"
-            >Robusta Vin</a
-          >
+
+          <!-- Rätt 2 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Risotto con capesante</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">295 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Risotto med smörstekt pilgrimsmussla, vitvin, sparris,
+              skaldjursfond paprika och Ndujaolja med sumak.
+            </p>
+          </div>
+
+          <!-- Rätt 3 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Burrata</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">165 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Burrata med soltorkad tomatpesto, ungsbakade vindruvor och kapris.
+            </p>
+          </div>
+
+          <!-- Rätt 4 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Tagliatelle al Tartufo</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">265 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Färsk pasta med hemgjord tryffelkräm, grana padano och hyvlad
+              tryffel från Toscana.
+            </p>
+          </div>
+
+          <!-- Rätt 5 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name">Carne cruda</span>
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">175 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Råbiff på kalvinnanlår, dragonemulsion, semitorkade tomater, 30
+              månaders lagrad parmesan och ruccola.
+            </p>
+          </div>
+
+          <!-- Rätt 6 -->
+          <div class="menu-item">
+            <div class="menu-header">
+              <span class="fw-bold me-2" id="name"
+                >Gnocchi guanciale e mele</span
+              >
+              <div class="line"></div>
+              <span class="fw-bold ms-2" id="price">285 KR</span>
+            </div>
+            <p class="text-muted mt-2 mb-0">
+              Potatispasta med calvados, äpple, guanciale, ostcrunch och
+              rosmarinolja.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="d-flex flex-column align-items-center" id="openingHours">
-        <div class="col-md-6 mt-3">
-          <h1>Öppettider</h1>
-        </div>
-        <div class="col-md-4 mt-5 px-5">
-          <p>Tisdag - Torsdag 16:00-22:00</p>
-          <p>Fredag - Lördag 12:00-22:00</p>
-          <p>(söndagar och måndagar stängt)</p>
-          <p>
-            Midsommarafton, midsommardagen, julafton, juldagen, nyårsafton och
-            nyårsdagen har vi stängt! Se sociala medier för mer uppdaterade
-            öppettider.
-          </p>
-        </div>
+      <div class="d-flex justify-content-center">
+        <a
+          class="btn mx-3 mt-5"
+          id="bookButton"
+          aria-current="page"
+          target="_blank"
+          href="https://barrobusta.se/ws/media-library/d33e37a8d8a64b6ca6d1574c6ae1919d/vinlista-bar-robusta.pdf"
+          >Vinlista</a
+        >
+        <a
+          class="btn mx-3 mt-5"
+          id="bookButton"
+          aria-current="page"
+          target="_blank"
+          href="https://barrobusta.se/ws/media-library/1be6d7ab5a40375d273ef281a3da23d6/lunch-v-14-april.pdf"
+          >Lunchmeny</a
+        >
       </div>
 
-      <div class="map-container mb-5">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.449586247923!2d11.94593297698825!3d57.69183124100158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff33fc23bdd63%3A0x64f9eab0c2b7065c!2sBar%20Robusta!5e0!3m2!1ssv!2sse!4v1749855015739!5m2!1ssv!2sse"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <div class="d-block col-md-8 mx-auto" id="aboutText">
+        <h4 class="mt-5">
+          En mat & vinbar i hjärtat av Linné med mycket fokus på hantverksviner
+          som vi importerar upp själva från Europa. Maten fokuseras dels från
+          Italien men även övriga Europa, allt för att passa till det underbara
+          vinet vi serverar.
+        </h3>
+        <h1 class="mt-5">Varmt välkomna!</h1>
+        <img class="mt-5" src="images/pastaFooterImage.png" alt="Pasta Line Drawing" id="pastaImage"/>
       </div>
 
       <!-- Back to top knapp -->
-      <a href="#" class="back-to-top btn"> Boka Bord </a>
+      <!-- <a href="#" class="back-to-top btn"> Boka Bord </a> -->
     </main>
 
     <div class="footer">
@@ -327,7 +234,7 @@
         <li>
           <a
             ><img
-              src="icons/phone_icon_red.png"
+              src="icons/icons8-phone-50.png"
               alt="Phone"
               class="icon me-2"
             />031-713 38 29</a
@@ -385,24 +292,6 @@
           heroLogoText.classList.remove("scrolled-out");
         }
       });
-
-      // I din <script> längst ned i body
-      window.addEventListener("scroll", () => {
-        const scroll = window.scrollY;
-        const bg = document.querySelector(".parallax-bg");
-        if (bg) {
-          bg.style.transform = `translateY(${scroll * 0.8}px)`; // 40% hastighet
-        }
-      });
-
-      function scrollGallery(direction) {
-        const container = document.getElementById("horizontalGallery");
-        const scrollAmount = 340; // justeras efter bildbredd + gap
-        container.scrollBy({
-          left: direction * scrollAmount,
-          behavior: "smooth",
-        });
-      }
     </script>
   </body>
 </html>
