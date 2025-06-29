@@ -68,9 +68,6 @@
                 <a class="nav-link" href="index.html">Hem</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Alt. Två</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#wineTastings">Vinprovningar</a>
               </li>
               <li class="nav-item">
@@ -87,13 +84,13 @@
 
     <header class="hero-header">
       <img
-        src="/summerMenu/A4A2052.jpg"
+        src="summerMenu/A4A2052.jpg"
         alt="Header desktop"
         class="header-image parallax-bg d-none d-md-block"
       />
 
       <img
-        src="/summerMenu/A4A2046.jpg"
+        src="summerMenu/A4A2046.jpg"
         alt="Header mobil"
         class="header-image parallax-bg d-block d-md-none"
       />
@@ -305,8 +302,13 @@
         ></iframe>
       </div>
 
-      <!-- Back to top knapp -->
-      <a href="#" class="back-to-top btn"> Boka Bord </a>
+      <!-- BOKA knapp -->
+      <a
+        href="https://3.bordsbokaren.se/boka.php?i=3001&k=YLuN2trV"
+        class="back-to-top btn"
+      >
+        Boka Bord
+      </a>
     </main>
 
     <div class="footer">
@@ -317,7 +319,7 @@
             aria-current="page"
             href="https://www.instagram.com/barrobusta/"
             ><img
-              src="icons/icons8-instagram-50.png"
+              src="icons/instagram_icon_red.png"
               alt="Instagram"
               target="_blank"
               class="icon me-2"
@@ -341,7 +343,7 @@
             target="_blank"
             rel="noopener noreferrer"
             ><img
-              src="icons/icons8-mail-48.png"
+              src="icons/mail_icon_red.png"
               alt="Email"
               class="icon me-2"
             />info@barrobusta.se</a
@@ -354,7 +356,7 @@
             href="https://maps.app.goo.gl/2gxySFhVynQQchbn6"
             target="_blank"
             ><img
-              src="icons/icons8-location-50.png"
+              src="icons/location_icon_red.png"
               alt="Location"
               class="icon me-2"
             />Olivedalsgatan 26, 413 10 Göteborg</a
@@ -386,12 +388,11 @@
         }
       });
 
-      // I din <script> längst ned i body
       window.addEventListener("scroll", () => {
         const scroll = window.scrollY;
         const bg = document.querySelector(".parallax-bg");
         if (bg) {
-          bg.style.transform = `translateY(${scroll * 0.8}px)`; // 40% hastighet
+          bg.style.transform = `translateY(${scroll * 0.8}px)`;
         }
       });
 
