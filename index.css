@@ -3,6 +3,14 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h3 {
+  font-weight: bold;
+  color: rgb(177, 18, 47);
+  letter-spacing: 2px;
 }
 
 .navbar {
@@ -14,26 +22,28 @@ html {
 }
 
 .navbar-toggler {
-  border-color: white;
+  border: none;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(177, 18, 47);
   text-decoration: none;
-  font-weight: bold;
 }
 
 .nav-link {
+  display: inline-block;
   position: relative;
-  color: white;
+  color: rgb(177, 18, 47);
   text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: rgb(177, 18, 47);
 }
 
 .nav-link::after {
@@ -43,12 +53,12 @@ html {
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: white;
+  background-color: rgb(177, 18, 47);
   transition: width 0.3s ease;
 }
 
 .nav-link.active {
-  color: rgb(126, 28, 28);
+  color: rgb(177, 18, 47);
   font-weight: bold;
 }
 
@@ -56,16 +66,19 @@ html {
   width: 100%;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  transition: opacity 0.3s;
+#offcanvasNavbarLabel {
+  width: 250px;
+  opacity: 1;
+}
+
+.offcanvas-body,
+.offcanvas-header {
+  background-color: antiquewhite;
 }
 
 .small-logo {
   opacity: 0;
-  width: 200px;
+  width: 250px;
 }
 
 .container {
@@ -78,14 +91,15 @@ main {
 }
 
 .btn {
-  background-color: rgb(126, 28, 28);
+  background-color: rgb(154, 17, 42);
   color: #fff;
-  width: 200px;
+  width: 300px;
+  letter-spacing: 2px;
 }
 
 .btn:hover {
   color: #fff;
-  background-color: rgb(105, 22, 22);
+  background-color: rgb(90, 19, 19);
 }
 
 .back-to-top {
@@ -97,55 +111,112 @@ main {
   align-items: center;
   text-decoration: none;
   z-index: 1000;
-  background-color: rgb(126, 28, 28);
+  background-color: rgb(154, 17, 42);
+  width: 200px;
   color: #fff;
 }
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  text-align: start;
+.menu-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.menu-item {
-  display: flex;
-  flex-direction: column;
+.menu-link img {
+  width: 20rem;
+  height: auto;
+  display: block;
+  filter: blur(1px);
+  transition: transform 0.4s ease;
 }
 
-.menu-header {
-  display: flex;
-  align-items: center;
+.menu-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(177, 18, 47);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
+  pointer-events: none;
 }
 
-.menu-header .line {
-  flex-grow: 1;
-  border-bottom: 1px solid #ccc;
-  opacity: 0.9;
+.menu-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  z-index: 10;
 }
 
-.border-bottom {
-  opacity: 0.9;
-}
-
-#price {
-  color: rgb(126, 28, 28);
+.menu-link:hover img {
+  transform: scale(1.08);
 }
 
 #aboutText {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#wineMenu {
+  filter: sepia(100%);
+}
+
+#wineTastings {
+  background-color: antiquewhite;
+  color: rgb(177, 18, 47);
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+#wineTastings h1 {
+  color: rgb(177, 18, 47);
 }
 
 #pastaImage {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 350px;
+  max-height: auto;
+}
+
+.map-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto; /* centrerar och ger lite luft */
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.map-container iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .header-image {
   z-index: 1;
   width: 100%;
   display: flex;
+}
+
+.hero-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* viktig */
 }
 
 .hero-logo-text {
@@ -157,6 +228,71 @@ main {
   z-index: 10;
   opacity: 1;
   transition: opacity 0.3s;
+}
+
+.horizontal-gallery-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+.horizontal-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.gallery-column img {
+  width: 320px;
+  height: auto;
+  object-fit: content;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  user-select: none;
+}
+
+.scroll-btn.left {
+  left: 0;
+  background-color: transparent;
+  color: rgb(90, 19, 19);
+}
+
+.scroll-btn.right {
+  right: 0;
+  background-color: transparent;
+  color: rgb(90, 19, 19);
 }
 
 /* Scroll-state */
@@ -181,8 +317,8 @@ main {
 .footer,
 footer,
 .footer li a {
-  background-color: rgb(126, 28, 28);
-  color: #fff;
+  background-color: #faebd7;
+  color: rgb(177, 18, 47);
   list-style: none;
   text-decoration: none;
 }
@@ -197,7 +333,9 @@ footer,
 }
 @media (max-width: 768px) {
   .hero-logo-text {
-    width: 90%;
+    width: 75%;
+    position: fixed;
+    top: 0%;
   }
 
   .hero-header {
