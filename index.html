@@ -80,7 +80,7 @@
                 <a class="nav-link" href="#wineTastings">Vinprovningar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#wineTastings">Handla Vin</a>
+                <a class="nav-link" href="#wineShopping">Handla Vin</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#openingHours">Öppettider</a>
@@ -238,7 +238,7 @@
               </p>
             </div>
             <div class="col-md-6 mt-4">
-              <h5 class="my-4">Tider i höst:</h5>
+              <h5 class="my-4" id="wineShopping">Tider i höst:</h5>
               <p>
                 9 September – Franska Cru <br /><br />
 
@@ -407,6 +407,16 @@
           behavior: "smooth",
         });
       }
+
+      document
+        .querySelectorAll('.offcanvas .nav-link[href^="#"]')
+        .forEach((link) => {
+          link.addEventListener("click", () => {
+            const offcanvasEl = document.querySelector(".offcanvas.show");
+            const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+            if (bsOffcanvas) bsOffcanvas.hide();
+          });
+        });
     </script>
   </body>
 </html>
